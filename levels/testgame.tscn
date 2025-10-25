@@ -1,0 +1,188 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2jkk4yadatan"]
+
+[ext_resource type="Texture2D" uid="uid://50en341gsmb3" path="res://assets/bg/Background.png" id="1_b45a8"]
+[ext_resource type="Script" uid="uid://d7kmx5p31ugw" path="res://levels/MainScript.gd" id="1_pou7f"]
+[ext_resource type="Texture2D" uid="uid://dtl7lv254pooo" path="res://assets/chars/Liu_South_Rodion_Acquisition_2.png" id="2_pou7f"]
+[ext_resource type="Script" uid="uid://ba55f8i8atddf" path="res://levels/eventbtn.gd" id="4_b45a8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t6hw"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0, 0, 1)
+
+[node name="Testgame" type="Node2D"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("resc1", "resc2", "resc3", "resc4")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 649.0
+script = ExtResource("1_pou7f")
+resc1 = NodePath("resources/VBoxContainer2/pollutionlbl")
+resc2 = NodePath("resources/VBoxContainer2/securitylbl")
+resc3 = NodePath("resources/VBoxContainer2/happinesslbl")
+resc4 = NodePath("resources/VBoxContainer2/awarenesslbl")
+
+[node name="Background" type="Sprite2D" parent="Control"]
+position = Vector2(576.25, 321.75)
+scale = Vector2(1.16553, 1.1849)
+texture = ExtResource("1_b45a8")
+
+[node name="LiuSouthRodionAcquisition2" type="Sprite2D" parent="Control"]
+position = Vector2(446, 233)
+scale = Vector2(0.546399, 0.473462)
+texture = ExtResource("2_pou7f")
+
+[node name="eventbtn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 388.0
+offset_right = 175.0
+offset_bottom = 449.0
+text = "Generate
+Natural Event"
+script = ExtResource("4_b45a8")
+
+[node name="nextdaybtn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 546.0
+offset_right = 570.0
+offset_bottom = 612.0
+text = "Next Day"
+
+[node name="eventbox" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 80.0
+offset_right = 1114.0
+offset_bottom = 617.0
+theme_override_font_sizes/normal_font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7t6hw")
+text = "I AM THE FUCKING TEXT BOX I DISPLAY TEXT IN THE BOX"
+scroll_following = true
+vertical_alignment = 2
+
+[node name="daylbl" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 222.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 81
+text = "Day 0"
+
+[node name="daylbl2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 10.0
+offset_right = 889.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 44
+text = "Text Log"
+
+[node name="resources" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/resources"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 110.0
+offset_right = 258.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="pollutionlbl" type="Label" parent="Control/resources/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Pollution: "
+horizontal_alignment = 3
+
+[node name="securitylbl" type="Label" parent="Control/resources/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Security: "
+horizontal_alignment = 3
+
+[node name="happinesslbl" type="Label" parent="Control/resources/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Happiness: "
+horizontal_alignment = 3
+
+[node name="awarenesslbl" type="Label" parent="Control/resources/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Awareness: "
+horizontal_alignment = 3
+
+[node name="incomelbl" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 480.0
+offset_right = 181.0
+offset_bottom = 522.0
+theme_override_font_sizes/font_size = 30
+text = "Income: $"
+horizontal_alignment = 3
+
+[node name="menubtn" type="Button" parent="."]
+offset_left = 1074.0
+offset_top = 12.0
+offset_right = 1136.0
+offset_bottom = 66.0
+text = "Quit to
+Menu"
+
+[node name="projectsbtn" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 552.0
+offset_right = 169.0
+offset_bottom = 614.0
+text = "Projects"
+
+[node name="initiativesbtn" type="Button" parent="."]
+offset_left = 228.0
+offset_top = 551.0
+offset_right = 371.0
+offset_bottom = 613.0
+text = "Initiatives"
+
+[node name="projectsui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="projectspanel" type="Panel" parent="projectsui"]
+layout_mode = 0
+offset_left = 1154.0
+offset_right = 2306.0
+offset_bottom = 648.0
+
+[node name="initiativesui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="initiativespanel" type="Panel" parent="initiativesui"]
+layout_mode = 0
+offset_top = 649.0
+offset_right = 1152.0
+offset_bottom = 1297.0
+
+[connection signal="pressed" from="Control/eventbtn" to="Control" method="eventbtn_pressed"]
+[connection signal="pressed" from="Control/nextdaybtn" to="Control" method="nextday_pressed"]
+[connection signal="pressed" from="menubtn" to="Control" method="quit_to_menu"]
