@@ -1,0 +1,6 @@
+[gd_resource type="ButtonGroup" load_steps=2 format=3 uid="uid://c4o65lgbm6go0"]
+
+[ext_resource type="Script" uid="uid://8tanonkq3nww" path="res://levels/eventpnl.gd" id="1_1x7ns"]
+
+[resource]
+script = ExtResource("1_1x7ns")

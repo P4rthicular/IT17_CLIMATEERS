@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2jkk4yadatan"]
+[gd_scene load_steps=11 format=3 uid="uid://d2jkk4yadatan"]
 
 [ext_resource type="Script" uid="uid://d7kmx5p31ugw" path="res://levels/MainScript.gd" id="1_pou7f"]
 [ext_resource type="Texture2D" uid="uid://cwgep0xhvqn3v" path="res://assets/bg/S20.png" id="2_hi6i7"]
 [ext_resource type="Texture2D" uid="uid://qfxxnldjek8p" path="res://assets/chars/1735776867556573.jpg" id="3_b45a8"]
 [ext_resource type="StyleBox" uid="uid://bm5ipa32nc2wn" path="res://testbutton.tres" id="4_pou7f"]
-
-[sub_resource type="GDScript" id="GDScript_pou7f"]
-script/source = "extends Button
-"
+[ext_resource type="StyleBox" uid="uid://bukeyymdrdeie" path="res://eventtestbutton.tres" id="5_7t6hw"]
+[ext_resource type="Texture2D" uid="uid://pnjbc2rott7k" path="res://assets/chars/STARMAN.jpg" id="6_eg2c2"]
+[ext_resource type="ButtonGroup" uid="uid://c4o65lgbm6go0" path="res://eventbtns.tres" id="7_ccko6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t6hw"]
 bg_color = Color(0, 0, 0, 1)
@@ -45,66 +44,15 @@ scale = Vector2(0.584961, 0.58941)
 texture = ExtResource("2_hi6i7")
 
 [node name="fillermap2" type="Sprite2D" parent="Control"]
-position = Vector2(432.728, 310.509)
-scale = Vector2(0.651208, 0.373844)
+position = Vector2(432.729, 227.375)
+scale = Vector2(0.640355, 0.36813)
 texture = ExtResource("3_b45a8")
-
-[node name="menubtn" type="Button" parent="Control"]
-layout_mode = 2
-offset_left = 771.698
-offset_top = 548.118
-offset_right = 833.698
-offset_bottom = 602.118
-size_flags_horizontal = 8
-size_flags_vertical = 8
-text = "Quit to
-Menu"
-
-[node name="eventbtn" type="Button" parent="Control"]
-layout_mode = 2
-offset_left = 742.849
-offset_top = 425.512
-offset_right = 855.849
-offset_bottom = 500.512
-text = "(4$) Generate
-Test Event"
-script = SubResource("GDScript_pou7f")
-
-[node name="eventbox" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 868.0
-offset_top = 89.0
-offset_right = 1154.0
-offset_bottom = 642.0
-theme_override_font_sizes/normal_font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_7t6hw")
-text = "I AM THE  TEXT BOX I DISPLAY TEXT IN THE BOX THIS IS A TEST MESSAGE"
-fit_content = true
-scroll_following = true
-vertical_alignment = 2
-
-[node name="textloglbl" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 915.941
-offset_top = 14.4242
-offset_right = 1094.94
-offset_bottom = 75.4241
-theme_override_font_sizes/font_size = 44
-text = "Text Log"
 
 [node name="rsc_container" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-offset_right = 876.0
-offset_bottom = 120.0
-
-[node name="daylbl" type="Label" parent="Control/rsc_container"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = ExtResource("4_pou7f")
-text = "Day
-"
-horizontal_alignment = 1
+offset_top = 459.0
+offset_right = 869.0
+offset_bottom = 538.0
 
 [node name="pollutionlbl" type="Label" parent="Control/rsc_container"]
 layout_mode = 2
@@ -160,11 +108,43 @@ text = "Income
 $"
 horizontal_alignment = 1
 
+[node name="daylbl" type="Label" parent="Control/rsc_container"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("4_pou7f")
+text = "Day
+"
+horizontal_alignment = 1
+
+[node name="eventbox" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 89.0
+offset_right = 1154.0
+offset_bottom = 642.0
+theme_override_font_sizes/normal_font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_7t6hw")
+text = "I AM THE  TEXT BOX I DISPLAY TEXT IN THE BOX THIS IS A TEST MESSAGE"
+scroll_following = true
+autowrap_mode = 1
+vertical_alignment = 2
+
+[node name="textloglbl" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 879.882
+offset_top = 14.4242
+offset_right = 1058.88
+offset_bottom = 75.4241
+theme_override_font_sizes/font_size = 44
+text = "Text Log"
+
 [node name="btn_mcontainer" type="MarginContainer" parent="Control"]
 layout_mode = 0
-offset_top = 540.0
-offset_right = 702.0
-offset_bottom = 631.0
+offset_left = 29.0
+offset_top = 555.0
+offset_right = 731.0
+offset_bottom = 642.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/btn_mcontainer"]
 layout_mode = 2
@@ -227,36 +207,12 @@ offset_right = 135.0
 offset_bottom = 81.0
 text = "Close Panel"
 
-[node name="testbutton" type="Button" parent="Control/projectpnl/ColorRect"]
+[node name="projbuy" type="Button" parent="Control/projectpnl/ColorRect"]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 115.0
-offset_right = 181.0
-offset_bottom = 215.0
-text = "Test Button 1"
-
-[node name="testbutton2" type="Button" parent="Control/projectpnl/ColorRect"]
-layout_mode = 0
-offset_left = 243.0
-offset_top = 119.0
-offset_right = 375.0
-offset_bottom = 219.0
-text = "Test Button 2"
-
-[node name="testbutton3" type="Button" parent="Control/projectpnl/ColorRect"]
-layout_mode = 0
-offset_left = 441.0
-offset_top = 120.0
-offset_right = 573.0
-offset_bottom = 220.0
-text = "Test Button 3"
-
-[node name="buybutton" type="Button" parent="Control/projectpnl/ColorRect"]
-layout_mode = 0
-offset_left = 375.0
-offset_top = 322.0
-offset_right = 513.0
-offset_bottom = 384.0
+offset_left = 988.064
+offset_top = 324.544
+offset_right = 1126.06
+offset_bottom = 386.544
 text = "Buy"
 
 [node name="projectdesc" type="RichTextLabel" parent="Control/projectpnl/ColorRect"]
@@ -268,6 +224,100 @@ offset_bottom = 630.0
 theme_override_font_sizes/normal_font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_eg2c2")
 text = "Item text goes here"
+
+[node name="Label2" type="Label" parent="Control/projectpnl/ColorRect"]
+layout_mode = 2
+offset_left = 89.4924
+offset_top = 109.803
+offset_right = 204.492
+offset_bottom = 161.803
+text = "Town Infrastructure"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Control/projectpnl/ColorRect"]
+layout_mode = 2
+offset_left = 309.221
+offset_top = 111.787
+offset_right = 424.221
+offset_bottom = 163.787
+text = "Canal System"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="Control/projectpnl/ColorRect"]
+layout_mode = 2
+offset_left = 521.078
+offset_top = 113.59
+offset_right = 636.078
+offset_bottom = 165.59
+text = "Reforestation Project"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="Control/projectpnl/ColorRect"]
+layout_mode = 2
+offset_left = 742.0
+offset_top = 99.8864
+offset_right = 857.0
+offset_bottom = 174.886
+text = "Garbage Management"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="Control/projectpnl/ColorRect"]
+layout_mode = 2
+offset_left = 955.609
+offset_top = 112.689
+offset_right = 1070.61
+offset_bottom = 164.689
+text = "Emergency Shelter"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/projectpnl/ColorRect"]
+layout_mode = 0
+offset_left = 93.7579
+offset_top = 180.302
+offset_right = 1069.76
+offset_bottom = 281.302
+theme_override_constants/separation = 118
+
+[node name="proj1" type="Button" parent="Control/projectpnl/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Level
+"
+
+[node name="proj2" type="Button" parent="Control/projectpnl/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Level
+"
+
+[node name="proj3" type="Button" parent="Control/projectpnl/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Level
+"
+
+[node name="proj4" type="Button" parent="Control/projectpnl/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Level
+"
+
+[node name="proj5" type="Button" parent="Control/projectpnl/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Level
+"
+autowrap_mode = 2
 
 [node name="initiativepnl" type="MarginContainer" parent="Control"]
 visible = false
@@ -310,31 +360,7 @@ offset_right = 135.0
 offset_bottom = 81.0
 text = "Close Panel"
 
-[node name="testbutton" type="Button" parent="Control/initiativepnl/ColorRect"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 115.0
-offset_right = 181.0
-offset_bottom = 215.0
-text = "Test Button 1"
-
-[node name="testbutton2" type="Button" parent="Control/initiativepnl/ColorRect"]
-layout_mode = 0
-offset_left = 243.0
-offset_top = 119.0
-offset_right = 375.0
-offset_bottom = 219.0
-text = "Test Button 2"
-
-[node name="testbutton3" type="Button" parent="Control/initiativepnl/ColorRect"]
-layout_mode = 0
-offset_left = 441.0
-offset_top = 120.0
-offset_right = 573.0
-offset_bottom = 220.0
-text = "Test Button 3"
-
-[node name="buybutton" type="Button" parent="Control/initiativepnl/ColorRect"]
+[node name="initbuy" type="Button" parent="Control/initiativepnl/ColorRect"]
 layout_mode = 0
 offset_left = 985.0
 offset_top = 327.0
@@ -352,10 +378,195 @@ theme_override_font_sizes/normal_font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_eg2c2")
 text = "Item text goes here"
 
-[connection signal="pressed" from="Control/menubtn" to="Control" method="quit_to_menu"]
-[connection signal="pressed" from="Control/eventbtn" to="Control" method="eventbtn_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/initiativepnl/ColorRect"]
+offset_left = 382.244
+offset_top = 93.757
+offset_right = 768.244
+offset_bottom = 318.757
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/initiativepnl/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="init1" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Family Day"
+
+[node name="init2" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Tax Collection"
+autowrap_mode = 2
+
+[node name="init3" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Medical Drive"
+autowrap_mode = 2
+
+[node name="init4" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Garbage Recycling"
+autowrap_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/initiativepnl/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="init5" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Cleaning Drive"
+autowrap_mode = 2
+
+[node name="init6" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Emergency Drills"
+autowrap_mode = 2
+
+[node name="init7" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Disaster Awareness Drive"
+autowrap_mode = 2
+
+[node name="init8" type="Button" parent="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Response Training"
+autowrap_mode = 2
+
+[node name="eventpnl" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -281.5
+offset_right = 390.0
+offset_bottom = 238.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("4_pou7f")
+
+[node name="eventbtn1" type="Button" parent="Control/eventpnl"]
+layout_mode = 0
+offset_left = 7.72792
+offset_top = 427.361
+offset_right = 115.728
+offset_bottom = 513.361
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("5_7t6hw")
+toggle_mode = true
+button_group = ExtResource("7_ccko6")
+text = "Choice 1"
+autowrap_mode = 2
+
+[node name="eventbtn2" type="Button" parent="Control/eventpnl"]
+layout_mode = 0
+offset_left = 130.334
+offset_top = 427.36
+offset_right = 238.334
+offset_bottom = 513.36
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("5_7t6hw")
+toggle_mode = true
+button_group = ExtResource("7_ccko6")
+text = "Choice 2"
+autowrap_mode = 2
+
+[node name="eventbtn3" type="Button" parent="Control/eventpnl"]
+layout_mode = 0
+offset_left = 252.941
+offset_top = 427.36
+offset_right = 360.941
+offset_bottom = 513.36
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("5_7t6hw")
+toggle_mode = true
+button_group = ExtResource("7_ccko6")
+text = "Choice 3"
+autowrap_mode = 2
+
+[node name="eventbtnok" type="Button" parent="Control/eventpnl"]
+layout_mode = 0
+offset_left = 389.972
+offset_top = 425.785
+offset_right = 475.972
+offset_bottom = 504.785
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("5_7t6hw")
+toggle_mode = true
+button_group = ExtResource("7_ccko6")
+text = "Confirm"
+
+[node name="eventtxt" type="Label" parent="Control/eventpnl"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 57.2725
+offset_right = 485.0
+offset_bottom = 410.272
+text = "Test event text Test event text Test event text Test event text Test event text Test event text Test event text Test event text Test event text Test event text  Test event text Test event text Test event text Test event text vTest event text  Test event text
+Test event text"
+autowrap_mode = 3
+
+[node name="eventlabel" type="Label" parent="Control/eventpnl"]
+offset_left = 15.0
+offset_top = 12.2955
+offset_right = 765.0
+offset_bottom = 54.2955
+theme_override_font_sizes/font_size = 30
+text = "RANDOM DAILY EVENT"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="eventimg" type="Sprite2D" parent="Control/eventpnl"]
+position = Vector2(627.405, 284.021)
+scale = Vector2(0.215172, 0.221856)
+texture = ExtResource("6_eg2c2")
+
+[node name="menubtn" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = 1074.61
+offset_top = 14.4242
+offset_right = 1136.61
+offset_bottom = 68.4242
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Quit to
+Menu"
+
 [connection signal="pressed" from="Control/btn_mcontainer/HBoxContainer/projectsbtn" to="Control" method="_show_projects"]
 [connection signal="pressed" from="Control/btn_mcontainer/HBoxContainer/initiativesbtn" to="Control" method="_show_initiatives"]
 [connection signal="pressed" from="Control/btn_mcontainer/HBoxContainer/nextdaybtn" to="Control" method="nextday_pressed"]
 [connection signal="pressed" from="Control/projectpnl/ColorRect/closeproject" to="Control" method="_close_projects"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/projbuy" to="Control" method="_projbuy"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/HBoxContainer/proj1" to="Control" method="_proj1"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/HBoxContainer/proj2" to="Control" method="_proj2"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/HBoxContainer/proj3" to="Control" method="_proj3"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/HBoxContainer/proj4" to="Control" method="_proj4"]
+[connection signal="pressed" from="Control/projectpnl/ColorRect/HBoxContainer/proj5" to="Control" method="_proj5"]
 [connection signal="pressed" from="Control/initiativepnl/ColorRect/closeinitiative" to="Control" method="_close_initiatives"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/initbuy" to="Control" method="_initbuy"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2/init1" to="Control" method="_init1"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2/init2" to="Control" method="_init2"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2/init3" to="Control" method="_init3"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer2/init4" to="Control" method="_init4"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3/init5" to="Control" method="_init5"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3/init6" to="Control" method="_init6"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3/init7" to="Control" method="_init7"]
+[connection signal="pressed" from="Control/initiativepnl/ColorRect/VBoxContainer/HBoxContainer3/init8" to="Control" method="_init8"]
+[connection signal="pressed" from="Control/eventpnl/eventbtn1" to="Control" method="_eventop1_select"]
+[connection signal="pressed" from="Control/eventpnl/eventbtn2" to="Control" method="_eventop2_select"]
+[connection signal="pressed" from="Control/eventpnl/eventbtn3" to="Control" method="_eventop3_select"]
+[connection signal="pressed" from="Control/eventpnl/eventbtnok" to="Control" method="_confirmevent"]
+[connection signal="pressed" from="Control/menubtn" to="Control" method="quit_to_menu"]
