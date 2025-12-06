@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2jkk4yadatan"]
+[gd_scene load_steps=12 format=3 uid="uid://d2jkk4yadatan"]
 
 [ext_resource type="Script" uid="uid://d7kmx5p31ugw" path="res://levels/MainScript.gd" id="1_pou7f"]
-[ext_resource type="Texture2D" uid="uid://cwgep0xhvqn3v" path="res://assets/bg/S20.png" id="2_hi6i7"]
-[ext_resource type="Texture2D" uid="uid://qfxxnldjek8p" path="res://assets/chars/1735776867556573.jpg" id="3_b45a8"]
+[ext_resource type="Texture2D" uid="uid://but3rhqpu4p4f" path="res://assets/bg/dasas.png" id="2_ccko6"]
+[ext_resource type="Texture2D" uid="uid://dmiaduekqhkc" path="res://assets/chars/climateers_testmap.png" id="3_kdq7f"]
 [ext_resource type="StyleBox" uid="uid://bm5ipa32nc2wn" path="res://testbutton.tres" id="4_pou7f"]
+[ext_resource type="Texture2D" uid="uid://cbvqli8h410e8" path="res://assets/chars/Untitled design.png" id="4_pyubk"]
 [ext_resource type="StyleBox" uid="uid://bukeyymdrdeie" path="res://eventtestbutton.tres" id="5_7t6hw"]
-[ext_resource type="Texture2D" uid="uid://pnjbc2rott7k" path="res://assets/chars/STARMAN.jpg" id="6_eg2c2"]
 [ext_resource type="ButtonGroup" uid="uid://c4o65lgbm6go0" path="res://eventbtns.tres" id="7_ccko6"]
+[ext_resource type="Texture2D" uid="uid://cipkhk30akli4" path="res://assets/chars/dasas (1).png" id="8_saq6h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t6hw"]
 bg_color = Color(0, 0, 0, 1)
@@ -38,15 +39,20 @@ offset_right = 1154.0
 offset_bottom = 649.0
 script = ExtResource("1_pou7f")
 
-[node name="background2" type="Sprite2D" parent="Control"]
-position = Vector2(576, 319.5)
-scale = Vector2(0.584961, 0.58941)
-texture = ExtResource("2_hi6i7")
+[node name="Dasas" type="Sprite2D" parent="Control"]
+position = Vector2(576.579, 321.391)
+scale = Vector2(0.608933, 0.606846)
+texture = ExtResource("2_ccko6")
 
-[node name="fillermap2" type="Sprite2D" parent="Control"]
-position = Vector2(432.729, 227.375)
-scale = Vector2(0.640355, 0.36813)
-texture = ExtResource("3_b45a8")
+[node name="ClimateersTestmap" type="Sprite2D" parent="Control"]
+position = Vector2(434.449, 228.611)
+scale = Vector2(0.628311, 0.484026)
+texture = ExtResource("3_kdq7f")
+
+[node name="UntitledDesign" type="Sprite2D" parent="Control"]
+position = Vector2(432.336, 227.634)
+scale = Vector2(0.443655, 0.40651)
+texture = ExtResource("4_pyubk")
 
 [node name="rsc_container" type="HBoxContainer" parent="Control"]
 layout_mode = 1
@@ -441,7 +447,6 @@ text = "Response Training"
 autowrap_mode = 2
 
 [node name="eventpnl" type="Panel" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -457,6 +462,11 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = ExtResource("4_pou7f")
+
+[node name="Dasas(1)" type="Sprite2D" parent="Control/eventpnl"]
+position = Vector2(627.972, 285.603)
+scale = Vector2(0.405683, 0.419866)
+texture = ExtResource("8_saq6h")
 
 [node name="eventbtn1" type="Button" parent="Control/eventpnl"]
 layout_mode = 0
@@ -528,11 +538,6 @@ theme_override_font_sizes/font_size = 30
 text = "RANDOM DAILY EVENT"
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="eventimg" type="Sprite2D" parent="Control/eventpnl"]
-position = Vector2(627.405, 284.021)
-scale = Vector2(0.215172, 0.221856)
-texture = ExtResource("6_eg2c2")
 
 [node name="menubtn" type="Button" parent="Control"]
 layout_mode = 2
